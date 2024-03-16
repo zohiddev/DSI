@@ -1,0 +1,80 @@
+.header {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+  background: #fff;
+  padding: 20px 0;
+
+  @include media(800) {
+    padding: 10px 0;
+  }
+
+  &-row {
+    @include flex(center, space-between);
+  }
+
+  &-nav,
+  &-buttons {
+    @include media(800) {
+      display: none;
+    }
+  }
+
+  &-link {
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 18px;
+    color: $link-color;
+    @include trn();
+
+    &:not(:last-child) {
+      margin-right: 50px;
+
+      @include media(1000) {
+        margin-right: 25px;
+      }
+    }
+
+    @include media(1000) {
+      font-size: 16px;
+    }
+
+    &:hover,
+    &__active {
+      font-weight: 700;
+    }
+  }
+
+  &-button {
+    width: 32px;
+    height: 32px;
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    @include media(1000) {
+      width: 24px;
+      height: 24px;
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+
+      @include media(1000) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &-menu {
+    display: none;
+
+    @include media(800) {
+      display: block;
+    }
+  }
+}
