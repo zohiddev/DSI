@@ -1,4 +1,5 @@
 .footer {
+  margin-top: 60px;
   &-bottom {
     padding: 22px 0;
     background-color: $red-color;
@@ -73,7 +74,7 @@
       line-height: 149%;
       color: $footer-black;
     }
-  }
+  }       
 
   &-brands{
     max-width: 418px;
