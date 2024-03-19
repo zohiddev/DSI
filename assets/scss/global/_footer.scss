@@ -1,0 +1,91 @@
+.footer {
+  &-bottom {
+    padding: 22px 0;
+    background-color: $red-color;
+    text-align: center;
+
+    &__text {
+      font-weight: 400;
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+
+  &-row {
+    padding-bottom: 26px;
+    @include flex(flex-end, unset);
+    gap: 48px;
+
+    @include media(1000){
+        flex-wrap: wrap;
+    }
+
+    @include media(768){
+        gap: 32px;
+    }
+  }
+
+  &-about {
+    width: 32%;
+    @include media(1000){
+        width: 46%;
+    }
+    @include media(768){
+        width: 100%;
+    }
+    &__title {
+      font-weight: 500;
+      font-size: 18px;
+      color: $footer-black;
+      margin-bottom: 16px;
+    }
+
+    &__text {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 149%;
+      color: $footer-black;
+    }
+  }
+
+  &-contact {
+    width: 32%;
+    @include media(1000){
+        width: 46%;
+    }
+
+    @include media(768){
+        width: 100%;
+    }
+
+    &__title {
+      font-weight: 500;
+      font-size: 24px;
+      color: $footer-black;
+      margin-bottom: 16px;
+    }
+  }
+
+  &-list {
+    &__item {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 149%;
+      color: $footer-black;
+    }
+  }
+
+  &-brands{
+    max-width: 418px;
+    @include media(768){
+        width: 100%;
+    }
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+
+    img{
+        object-fit: contain;
+    }
+  }
+}
